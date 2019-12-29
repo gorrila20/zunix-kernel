@@ -8,6 +8,7 @@
 #include <kernel/tty.h>
 #include <stddef.h>
 #include <string.h>
+#include <klib.h>
 uintptr_t __stack_chk_guard = STACK_CHK_GUARD;
 static const char* version = "0.0.1 x86";
 __attribute__((noreturn))
@@ -18,7 +19,7 @@ __attribute__((noreturn))
 #if __STDC_HOSTED__
 	abort();
 #elif __is_myos_kernel
-	panic("Kernel panic: stack smashing detected -- HALT");
+	panic("Stack smashing detected");
 #endif
 }
 
