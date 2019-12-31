@@ -9,6 +9,7 @@
 #include <stddef.h>
 #include <string.h>
 #include <klib.h>
+#include <kernel/gdt.h>
 uintptr_t __stack_chk_guard = STACK_CHK_GUARD;
 static const char* version = "0.0.1 x86";
 __attribute__((noreturn))
@@ -24,7 +25,8 @@ __attribute__((noreturn))
 }
 
 void kernel_main(void) {
-	//set up stack smash protector for and panic()		
 	terminal_initialize();
-	printf("[1] Welcome to ZUNIX version %s Booting up....",version);	
+	printf("[1] Welcome to ZUNIX version %s Booting up....\n",version);
+	init_tables(); //set up GDT tables function found in gdt.h in kernel/include
+		
 }
