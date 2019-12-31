@@ -13,3 +13,4 @@ int putchar(int ic) {
 #endif
 	return ic;
 }
+
