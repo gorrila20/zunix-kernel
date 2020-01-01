@@ -27,7 +27,7 @@ __attribute__((noreturn))
 
 void kernel_main(void) {
 	terminal_initialize();
-	printf("[1] Welcome to ZUNIX version %s! \n",version);
+	printf("[1] Welcome to zUNIX version %s! \n",version);
 	init_tables(); //set up GDT tables function found in gdt.h in kernel/include
 				
 }
