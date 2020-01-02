@@ -8,4 +8,4 @@ done
 
 rm -rf sysroot
 rm -rf isodir
-rm -rf zUNIX.iso
+rm -rf zunix.iso

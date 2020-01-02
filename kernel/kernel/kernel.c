@@ -20,7 +20,7 @@ __attribute__((noreturn))
 
 #if __STDC_HOSTED__
 	abort();
-#elif __is_myos_kernel
+#elif __is_zunix_kernel
 	panic("Stack smashing detected");
 #endif
 }
